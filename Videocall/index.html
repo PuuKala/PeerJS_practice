@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SimpleWebRTC practice</title>
+</head>
+
+<body>
+    <h1 id="title">Allow camera for video</h1>
+    <p>ID: </p>
+    <p id="id_selection">Caller</p>
+    <button onclick="id_change()">Change ID</button>
+    <button onclick="start()">Connect</button>
+    <button onclick="call()">Call</button>
+    <div>
+        <video id="localVideo" style="height: 150px;"></video>
+    </div>
+    <div>
+        <video id="remoteVideo" style="height: 150px;"></video>
+    </div>
+    <script src="../peerjs/dist/peerjs.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
