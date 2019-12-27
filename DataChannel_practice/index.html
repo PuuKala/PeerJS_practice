@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>PeerJS practice</title>
+</head>
+
+<body>
+    <h1 id="title">Chat done with PeerJS</h1>
+    <p>ID: </p>
+    <p id="id_selection">Caller</p>
+    <p>
+        The "Caller" connects to "Answerer". So if this site has connected to server with "Caller" 
+        ID and there's "Answerer" ID connected to the server too, press "Connect to peer". Answerer 
+        doesn't need to do anything. When the connection is established, let the chatting begin!
+        <br />
+        <br />
+        PS. There's no notification of any sort of the connection being established yet. This is just 
+        a demo of the PeerJS after all. You can see the get requests in console though. If there's no 
+        errors in the console, it should be working.
+    </p>
+    <button onclick="id_change()">Change ID</button>
+    <button onclick="start()">Connect to server</button>
+    <button onclick="connect()">Connect to peer</button>
+    <div id="chatbox"></div>
+    <input type="text" id="chatInput">
+    <style>
+    .button {
+        background-color: white;
+        border: 2px solid black;
+        border-radius: 8px;
+        color: black;
+    }
+
+    .button:active {
+        background-color: gray;
+    }
+    </style>
+    <button class="button" onclick="sendText()">Send</button>
+    <script src="peerjs.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>

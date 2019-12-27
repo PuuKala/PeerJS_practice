@@ -12,6 +12,19 @@
     <button onclick="id_change()">Change ID</button>
     <button onclick="start()">Connect</button>
     <button onclick="call()">Call</button>
+    <style>
+    .button {
+        background-color: white;
+        border: 2px solid black;
+        border-radius: 8px;
+        color: black;
+    }
+
+    .button:active {
+        background-color: gray;
+    }
+    </style>
+    <button class="button" onmousedown="talk()" onmouseup="no_talk()">Push-to-talk</button>
     <div>
         <audio id="remoteAudio"></audio>
     </div>
